@@ -1,0 +1,12 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+cmd = "go build -o ./tmp/app ./cmd/server"
+entrypoint = "./tmp/app"
+
+include_ext = ["go"]
+exclude_dir = ["tmp", "vendor", "docker"]
+delay = 1000
+
+log = "air-build.log"
